@@ -3,8 +3,14 @@
     <title>Mi blog</title>
 </head>
 <body>
-    <p>Hola Perú</p>
-    <p>Ya podemos empezar
-    <h1> OK </h1></p>
+    <p>Hola Mundo</p>
+    <p>Ya podemos empezar --- día 27OCT2018
+    <h1> OK AS</h1></p>
+    {% for post in posts %} {{ post }}{% endfor %}
+<p> los posts: </p>
+    <div><h1><a href = "/"> Django XX Blog </a></h1></div>
+        {% for post in posts %}
+    <div> <p> publicado: {{ post.published_date }} </p><h1><a href = "">{{ post.title }} </a></h1><p>{{ post.text|linebreaksbr }} </p></div>
+        {% endfor %}
 </body>
 </html>
